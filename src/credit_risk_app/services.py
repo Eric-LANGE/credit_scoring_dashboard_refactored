@@ -3,8 +3,8 @@
 Services module for Credit Risk Dashboard.
 
 Contains:
-- HFHubAssetManager: Downloads assets from HuggingFace Hub at startup
-- InferenceService: Model inference with lazy caching (original functionality)
+- HFHubAssetManager: downloads assets from HuggingFace Hub at startup
+- InferenceService: model inference with lazy caching
 """
 
 import logging
@@ -180,7 +180,7 @@ class HFHubAssetManager:
 
 
 # =============================================================================
-# INFERENCE SERVICE (ORIGINAL FUNCTIONALITY PRESERVED)
+# INFERENCE SERVICE
 # =============================================================================
 
 
@@ -189,7 +189,7 @@ class InferenceService:
     Service for runtime inference with caching.
 
     Strategy:
-    - Download assets from HF Hub at startup (if enabled)
+    - Download assets from HF Hub at startup
     - Load model + raw data
     - Lazy preprocessing + prediction on first request (~5s warmup)
     - Cache all results in memory (instant subsequent requests)
@@ -215,7 +215,7 @@ class InferenceService:
         if download_from_hub:
             HFHubAssetManager.download_all_assets()
 
-        # Set paths (use provided or defaults from config)
+        # Set paths
         model_path = model_path or config.LOCAL_MODEL_DIR
         raw_data_path = raw_data_path or config.get_raw_data_path()
         shap_explanation_path = (

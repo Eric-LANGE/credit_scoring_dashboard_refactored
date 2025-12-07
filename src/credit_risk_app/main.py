@@ -1,8 +1,6 @@
 # src/credit_risk_app/main.py
 """
-Credit Risk Dashboard API - FastAPI Backend.
-
-All original endpoints preserved, with HF Hub asset download at startup.
+Credit Risk Dashboard API, FastAPI backend with HF Hub asset download at startup.
 """
 
 import json

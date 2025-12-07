@@ -1,1 +1,1 @@
-# Credit Risk Dashboard Application Package
+# Credit Risk Dashboard application package

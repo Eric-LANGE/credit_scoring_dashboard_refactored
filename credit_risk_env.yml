@@ -28,7 +28,7 @@ dependencies:
   - matplotlib
   - shap
 
-  # --- HuggingFace Hub integration (NEW) ---
+  # --- HuggingFace Hub integration ---
   - huggingface_hub>=0.20.0
 
   # --- Development & testing ---

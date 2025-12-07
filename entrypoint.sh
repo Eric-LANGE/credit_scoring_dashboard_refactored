@@ -22,14 +22,14 @@ else
     echo "WARNING: No persistent storage available, using temp dir: $HF_HOME"
 fi
 
-echo "===== Application Startup at $(date +'%Y-%m-%d %H:%M:%S') ====="
+echo "===== Application startup at $(date +'%Y-%m-%d %H:%M:%S') ====="
 echo "HF_HOME: $HF_HOME"
 echo "HF_MODEL_REPO_ID: ${HF_MODEL_REPO_ID:-not set}"
 echo "HF_DATA_REPO_ID: ${HF_DATA_REPO_ID:-not set}"
 
 # Cleanup function
 cleanup() {
-    echo "--- Shutting down services gracefully ---"
+    echo "--- Shutting down services ---"
     if [ ! -z "${FASTAPI_PID:-}" ]; then
         kill -TERM "$FASTAPI_PID" 2>/dev/null || true
     fi

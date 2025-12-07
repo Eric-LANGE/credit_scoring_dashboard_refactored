@@ -56,7 +56,7 @@ def apply_transformations(
         ]
         available_cols = list(df_processed.columns)
         error_message = (
-            f"Critical error in preprocessing: After all transformations, "
+            f"Critical error in preprocessing: after all transformations, "
             f"the following expected features were not found: {missing_cols}. "
             f"Available columns after processing: {available_cols}. "
             f"Input df columns were: {list(df.columns)}. "
@@ -242,7 +242,7 @@ def _engineer_ratio_features(df: pd.DataFrame) -> None:
 
 def _cast_numeric_to_float(df: pd.DataFrame) -> None:
     """
-    Cast ALL numeric columns to float64 (MLflow signature requirement).
+    Cast all numeric columns to float64 (MLflow signature requirement).
     """
     numeric_cols = df.select_dtypes(include=np.number).columns.tolist()
 

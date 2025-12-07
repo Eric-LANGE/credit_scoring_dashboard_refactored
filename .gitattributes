@@ -1,13 +1,9 @@
 # =============================================================================
 # Git Attributes
 # =============================================================================
-# Note: Git LFS is no longer needed for this repository.
-# All large assets (models, data, SHAP, plots) are stored on HuggingFace Hub
-# and downloaded at runtime.
-# =============================================================================
 
 # Enforce LF line endings
-*          text=auto eol=LF
+* text=auto eol=LF
 *.py       text eol=LF
 *.sh       text eol=LF
 *.yml      text eol=LF

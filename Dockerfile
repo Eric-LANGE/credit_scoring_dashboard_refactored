@@ -1,5 +1,5 @@
 # =============================================================================
-# Credit Risk Dashboard - Slim Dockerfile
+# Credit Risk Dashboard
 # =============================================================================
 # Assets (model, data, SHAP, plots) are downloaded from HuggingFace Hub at runtime.
 # This keeps the image small (~50MB vs ~150MB with embedded assets).

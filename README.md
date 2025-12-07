@@ -1,5 +1,5 @@
 ---
-title: Credit Risk Dashboard (Refactored)
+title: Credit Risk Dashboard
 emoji: 📊
 colorFrom: blue
 colorTo: green
@@ -8,7 +8,7 @@ pinned: false
 port: 7860
 ---
 
-# Credit Risk Dashboard (Refactored)
+# Credit Risk Dashboard
 
 Dashboard de scoring crédit avec stockage externe des assets sur HuggingFace Hub.
 
@@ -66,7 +66,7 @@ Dashboard de scoring crédit avec stockage externe des assets sur HuggingFace Hu
 
 ## Structure des dépôts HF Hub
 
-### Dépôt Modèle (`credit-risk-dashboard-model`)
+### Dépôt modèle (`credit-risk-dashboard-model`)
 
 ```
 gradient_boosting/
@@ -83,7 +83,7 @@ gradient_boosting/
         └── metrics.py
 ```
 
-### Dépôt Dataset (`credit-risk-dashboard-data`)
+### Dépôt dataset (`credit-risk-dashboard-data`)
 
 ```
 ├── application_test.csv
@@ -122,32 +122,6 @@ gradient_boosting/
 | `GET /features/bivariate_data` | Données scatter plot |
 | `GET /shap/global` | Image beeswarm SHAP |
 | `GET /features/{feature}/distribution` | Histogramme |
-
-## Fonctionnalités préservées
-
-- ✅ Dashboard Streamlit complet
-- ✅ Gauge de score crédit
-- ✅ Caractéristiques principales du client
-- ✅ SHAP global (beeswarm) et local (waterfall)
-- ✅ Positionnement univarié (distribution)
-- ✅ Analyse bivariée (scatter plot)
-- ✅ Preprocessing identique à l'entraînement
-- ✅ Lazy caching des prédictions
-- ✅ Tests unitaires
-
-## Développement local
-
-```bash
-# Définir les variables d'environnement
-export HF_MODEL_REPO_ID="username/credit-risk-dashboard-model"
-export HF_DATA_REPO_ID="username/credit-risk-dashboard-data"
-
-# Lancer FastAPI
-uvicorn src.credit_risk_app.main:app --port 8000 &
-
-# Lancer Streamlit
-streamlit run src/credit_risk_app/dashboard.py --server.port 7860
-```
 
 ## Licence
 

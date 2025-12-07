@@ -1,6 +1,6 @@
 ---
 title: Credit Risk Dashboard
-emoji: 📊
+emoji: 💹
 colorFrom: blue
 colorTo: green
 sdk: docker
